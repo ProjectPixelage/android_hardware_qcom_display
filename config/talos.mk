@@ -7,7 +7,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
-    gralloc.sm6150 \
     lights.sm6150 \
     hwcomposer.sm6150 \
     libqdutils \
