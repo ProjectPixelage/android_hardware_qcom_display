@@ -65,7 +65,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.hw=0 \
     debug.egl.hw=0 \
     debug.sf.latch_unsignaled=1 \
-    debug.sf.auto_latch_unsignaled=0 \
     debug.mdpcomp.logs=0 \
     vendor.gralloc.disable_ubwc=0 \
     vendor.gralloc.enable_logs=0 \
@@ -98,6 +97,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.predict_hwc_composition_strategy=0 \
     debug.sf.treat_170m_as_sRGB=1 \
     vendor.display.enable_display_extensions=1
+
+ifeq ($(PLATFORM_VERSION), 15)
+PRODUCT_VENDOR_PROPERTIES +=  debug.sf.auto_latch_unsignaled=1
+else
+PRODUCT_VENDOR_PROPERTIES +=  debug.sf.auto_latch_unsignaled=0
+endif
 
 # Enable offline rotator for Bengal.
 ifneq ($(TARGET_BOARD_PLATFORM),bengal)
