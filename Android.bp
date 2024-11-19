@@ -33,6 +33,7 @@ cc_library_headers {
 }
 
 subdirs = [
+    "gralloc",
     "libqservice",
     "libqdutils",
 ]
