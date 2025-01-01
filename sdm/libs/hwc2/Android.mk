@@ -42,10 +42,6 @@ LOCAL_SHARED_LIBRARIES        := libsdmcore libqservice libbinder libhardware li
                                  vendor.display.config@1.11 \
                                  vendor.display.config@2.0
 
-ifeq ($(TARGET_BOARD_AUTO), true)
-LOCAL_CFLAGS                  += -DCONFIG_BASEID_FROM_PROP
-endif
-
 ifeq ($(TARGET_USES_FOD_ZPOS), true)
 LOCAL_CFLAGS                  += -DFOD_ZPOS
 endif
