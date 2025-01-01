@@ -22,10 +22,6 @@ ifeq ($(TARGET_USES_DRM_PP),true)
     LOCAL_CFLAGS              += -DPP_DRM_ENABLE
 endif
 
-ifeq ($(ENABLE_HYP),true)
-    LOCAL_CFLAGS += -DHYPERVISOR
-endif
-
 ifeq ($(TARGET_USES_FOD_ZPOS), true)
     LOCAL_CFLAGS              += -DFOD_ZPOS
 endif
